@@ -9,11 +9,12 @@ public class Asignatura {
     public Tipo tipo;
 
     public Asignatura() {
+    	//this("Juan", 123,123,Tipo.FUNDAMENTACION); Incluir esto genera error (debemos tener un solo constructor y en la primera línea)
         this("Sin nombre",Tipo.FUNDAMENTACION);
-        this(0);
+        //this(0); El constructor debe ser invocado en la primera línea y ni siquiera existe
     }
 
-    public Asignatura(int codigoInterno,Tipo tipo) {
+    public Asignatura(short codigoInterno,Tipo tipo) {
         this("Sin nombre", codigoInterno, 0,tipo);
     }
 
@@ -39,7 +40,7 @@ public class Asignatura {
         this.tipo = tipo;
     }
 
-    public void cambiarDatos(int codigoInterno) {
+    public void cambiarDatos(short codigoInterno) {
         this.codigoInterno = codigoInterno;
     }
 
